@@ -6,13 +6,13 @@ if (isNeedPackage.toBoolean() && isUseBooster.toBoolean()) {
 }
 
 android {
-    compileSdkVersion build_versions.target_sdk
-    buildToolsVersion build_versions.build_tools
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
 
     defaultConfig {
         applicationId "com.xuexiang.rxjava3sample"
         minSdkVersion 17
-        targetSdkVersion build_versions.target_sdk
+        targetSdkVersion 29
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"

@@ -4,7 +4,7 @@ import java.util.regex.Pattern
 ext.deps = [:]
 def versions = [:]
 
-versions.android_gradle_plugin = "4.1.0"
+versions.android_gradle_plugin = "3.4.2"
 versions.android_maven_gradle_plugin = "2.0"
 versions.gradle_bintray_plugin = "1.8.0"
 versions.booster = "3.1.0"
@@ -102,7 +102,7 @@ espresso.contrib = "androidx.test.espresso:espresso-contrib:$versions.espresso"
 espresso.intents = "androidx.test.espresso:espresso-intents:$versions.espresso"
 deps.espresso = espresso
 
-deps.android_gradle_plugin = "com.android.tools.build:gradle:$versions.android_gradle_plugin"
+deps.android_gradle_plugin = "com.android.tools.build:gradle:3.4.2"
 deps.android_maven_gradle_plugin = "com.github.dcendents:android-maven-gradle-plugin:$versions.android_maven_gradle_plugin"
 deps.gradle_bintray_plugin = "com.jfrog.bintray.gradle:gradle-bintray-plugin:$versions.gradle_bintray_plugin"
 deps.glide = "com.github.bumptech.glide:glide:$versions.glide"
@@ -182,9 +182,8 @@ ext.isRelease = this.&isRelease
 //默认添加代码仓库路径
 static def addRepos(RepositoryHandler handler) {
     handler.mavenLocal()
-    handler.google { url 'https://maven.aliyun.com/repository/google' }
-    handler.jcenter { url 'https://maven.aliyun.com/repository/jcenter' }
-    handler.mavenCentral { url 'https://maven.aliyun.com/repository/central' }
+
+    handler.google { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
     handler.maven { url "https://jitpack.io" }
     handler.maven { url 'https://maven.aliyun.com/repository/public' }
     handler.maven { url "https://repo1.maven.org/maven2/" }
