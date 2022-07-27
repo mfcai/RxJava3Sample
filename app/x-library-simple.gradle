@@ -41,4 +41,5 @@ project.configurations.each { configuration ->
 
 aspectjx {
     include 'com.xuexiang.rxjava3sample'
+    exclude 'androidx', 'com.google', 'com.squareup', 'com.alipay', 'com.taobao', 'org.apache'
 }
